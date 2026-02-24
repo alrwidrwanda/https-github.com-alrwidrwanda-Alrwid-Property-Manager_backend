@@ -1,7 +1,7 @@
 {
   "name": "alrwid-property-manager-backend",
   "version": "1.0.0",
-  "description": "Backend API for Alrwid Property Manager",
+  "description": "Backend API for Alrwid Property Manager app",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

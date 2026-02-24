@@ -43,7 +43,7 @@ app.use('/api/apartment-reservations', apartmentReservationRoutes);
 app.use('/api/receipts', receiptRoutes);
 app.use('/api/defaulted-sales', defaultedSaleRoutes);
 
-// Health check endpoint
+// Health check endpoint 
 app.get('/api/health', (req, res) => {
   res.json({
     success: true,
