@@ -1,0 +1,20 @@
+{
+  "name": "alrwid-property-manager-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Alrwid Property Manager",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test:connection": "node test-connection.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.8.0"
+  }
+}
