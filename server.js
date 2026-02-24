@@ -3,15 +3,18 @@ require('./config/env');
 
 const connectDB = require('./config/db');
 const app = require('./app');
-const { port, nodeEnv } = require('./config/env');
+const { nodeEnv } = require('./config/env');
+
+// Use Render-provided PORT or fallback
+const PORT = process.env.PORT || 3000;
 
 // Connect to database and start server
 connectDB()
   .then(() => {
-    app.listen(port, () => {
+    app.listen(PORT, () => {
       console.log(`\n✓ Server running in ${nodeEnv} mode`);
-      console.log(`  URL: http://localhost:${port}`);
-      console.log(`  Health: http://localhost:${port}/api/health\n`);
+      console.log(`  URL: http://localhost:${PORT}`);
+      console.log(`  Health: http://localhost:${PORT}/api/health\n`);
     });
   })
   .catch((err) => {
@@ -24,3 +27,4 @@ connectDB()
     console.error('\nSee TROUBLESHOOTING.md for detailed help.\n');
     process.exit(1);
   });
+  
